@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello wasm-pack!</title>
-  </head>
-  <body>
-    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
-    <script src="./bootstrap.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="img/fav.png" />
+  <link href="jdrp.css" rel="stylesheet" type="text/css">
+  <link href="dist/rpgui.css" rel="stylesheet" type="text/css">
+  <title>JDRP</title>
+</head>
+
+<body style="background-color:#222222">
+  <!-- <body> -->
+
+  <div class="rpgui-content">
+
+    <div class="rpgui-container framed attributes">
+      <label>Health:</label>
+      <div class="rpgui-progress red"></div>
+      <label>XP:</label>
+      <div class="rpgui-progress" id="xp_bar"></div>
+    </div>
+
+    <div class="rpgui-container framed profile">
+      <h1 style="display:inline;">Name: ikoajwaedfhdgfh <div class="rpgui-container framed c_picture"> </div></h1>
+      <p>toto</p>
+      <p>toto</p>
+      <p>toto</p>
+      <p>toto</p>
+    </div>
+
+    <div class="rpgui-container framed" id="caracter">
+      <h1>Profile</h1>
+
+      <h2>Equipment</h2>
+      <div style="text-align:center;">
+        <div class="rpgui-icon weapon-slot"></div>
+        <div class="rpgui-icon shield-slot"></div>
+        <div class="rpgui-icon armor-slot"></div>
+        <div class="rpgui-icon helmet-slot"></div>
+      </div>
+      <div style="text-align:center;">
+        <div class="rpgui-icon ring-slot"></div>
+        <div class="rpgui-icon potion-slot"></div>
+        <div class="rpgui-icon magic-slot"></div>
+        <div class="rpgui-icon shoes-slot"></div>
+      </div>
+
+      <hr>
+      <h2>Stats</h2>
+      <div style="text-align:left; position:left; display: inline;">
+        <p> Strengh: 80 <span style="float : right;">Dexterity: 80 </span> </p>
+        <p> Luck: 80 <span style="float : right;">Willpower: 80 </span> </p>
+        <p> Endurance: 80 <span style="float : right;">Charism: 80 </span> </p>
+        <p> Perception: 80 <span style="float : right;">Education: 80 </span> </p>
+
+      </div>
+      <div style="text-align:right;  position:right; display: inline;">
+      </div>
+    </div>
+
+    <div class="rpgui-container framed" id="map">
+    </div>
+
+    <div class="rpgui-container framed-golden" id="bag">
+      <h1>Bag</h1>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+
+    </div>
+
+
+    <div class="rpgui-container framed" style="position: absolute; bottom: 0px; right: 0px;">
+      <button class="rpgui-button" type="button" id="caracter_button"
+        style="transform: scaleX(0.4); margin-right: -90px;">
+        <div style="transform: scaleX(1.4) scaleY(0.7);" class="rpgui-icon sword"></div>
+      </button>
+      <button class="rpgui-button" type="button" id="bag_button" style="transform: scaleX(0.4); margin-right: -90px;">
+        <div style="transform: scaleX(1.4) scaleY(0.7);" class="rpgui-icon sword"></div>
+      </button>
+      <button class="rpgui-button" type="button" id="map_button" style="transform: scaleX(0.4);">
+        <div style="transform: scaleX(1.4) scaleY(0.7);" class="rpgui-icon sword"></div>
+      </button>
+    </div>
+
+
+  </div>
+
+
+  </div>
+  <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+  <script src="./bootstrap.js"></script>
+  <script src="dist/rpgui.js"></script>
+</body>
+
 </html>

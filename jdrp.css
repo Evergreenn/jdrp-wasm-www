@@ -1,0 +1,61 @@
+/* body {
+    background-image: url('./img/map/Tds4.jpg');
+    background-repeat: no-repeat !important;
+    background-size: 100%;
+} */
+
+h1 {
+    font-size: 150% !important;
+}
+
+.attributes {
+    display: inline-block;
+    max-width: 25%;
+    width: 25%;
+    max-height: 200px;
+    height: 200px;
+}
+
+.profile {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    max-height: 200px;
+    height: 200px;
+}
+
+#map {
+    position: absolute;
+    background-image: url('./img/map/Tds4.jpg') !important;
+    background-repeat: no-repeat !important;
+    width: 700px;
+    height: 550px;
+    background-size: 700px !important;
+    display: none;
+}
+
+#caracter {
+    position: absolute;
+    width: 700px;
+    height: 550px;
+    display: none;
+}
+
+#bag {
+    position: absolute;
+    right: 0px;
+    width: 700px;
+    height: 550px;
+    display: none;
+}
+
+div.display_inline, .display_inline p {
+    display: inline;
+}
+
+.c_picture {
+    background-image: url(https://via.placeholder.com/150) !important;
+    float: right;
+    width: 150px;
+    height: 150px;
+}
