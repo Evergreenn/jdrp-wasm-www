@@ -24,6 +24,14 @@ h1 {
     height: 200px;
 }
 
+.display-none {
+    display: none;
+}
+
+.display {
+    display: block;
+}
+
 #map {
     position: absolute;
     background-image: url('./img/map/Tds4.jpg') !important;
@@ -31,14 +39,12 @@ h1 {
     width: 700px;
     height: 550px;
     background-size: 700px !important;
-    display: none;
 }
 
 #caracter {
     position: absolute;
     width: 700px;
     height: 550px;
-    display: none;
 }
 
 #bag {
@@ -46,7 +52,6 @@ h1 {
     right: 0px;
     width: 700px;
     height: 550px;
-    display: none;
 }
 
 div.display_inline, .display_inline p {
@@ -58,4 +63,48 @@ div.display_inline, .display_inline p {
     float: right;
     width: 150px;
     height: 150px;
+}
+
+/* The sidepanel menu */
+
+.sidepanel {
+    height: 250px;
+    width: 250px;
+    position: fixed;
+    z-index: 110000000000000000000000000000000000000000000000000000000 !important;
+    /* Stay on top */
+    top: 200px;
+    /* right: -250px; */
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+/* Position and style the close button (top right corner) */
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    font-size: 36px;
+    /* margin-left: 50px; */
+}
+
+.open{
+    right: 0px;
+}
+
+.close{
+    right: -250px;
+}
+
+#dicebtn {
+    float: right;
+}
+
+#openbtn {
+    width: 200px;
+    display: block;
+    position: absolute;
+    top: 200px;
+    right: 0px;
 }
