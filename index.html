@@ -33,43 +33,93 @@
     <div id="mySidepanel" class="rpgui-container framed sidepanel close">
       <a href="javascript:void(0)" id="closebtn" class="closebtn">&times;</a>
       <button id="dicebtn" class="rpgui-button" type="button">
-      <p>Dice</p>
-    </button>
+        <p>Dice</p>
+      </button>
     </div>
 
     <button id="openbtn" class="rpgui-button" type="button">
       <p>Tools</p>
     </button>
 
-    <div class="rpgui-container framed display-none" id="caracter">
+    <!-- <div class="rpgui-container framed" id="notes" style="position: fixed;  bottom: 0; width:60%; height:200px"> -->
+    <div class="rpgui-container framed" id="notes" style="position: fixed;  right: 0;  top:265px; width:625px; height:800px">
+      <h1>Notes</h1>
+      <hr>
+      <textarea name="text" id="text" cols="10" rows="50" style="height:670px;"></textarea>
+    </div>
+
+
+    <div class="rpgui-container framed display" id="caracter">
       <h1>Profile</h1>
 
       <h2>Equipment</h2>
+      <!-- <div style="float:left;">
+      
+        <div style="text-align:center; display: block;">
+          <div class="rpgui-icon helmet-slot"></div>
+        </div>
+        <div style="text-align:center;">
+          <div class="rpgui-icon glove-slot"></div>
+          <div class="rpgui-icon armor-slot"></div>
+          <div class="rpgui-icon wrists-slot"></div>
+        </div>
+        <div style="text-align:center;">
+          <div class="rpgui-icon belt-slot"></div>
+        </div>
+        <div style="text-align:center;">
+          <div class="rpgui-icon shoes-slot"></div>
+        </div>
+      </div>
+
+      <div style="float:right; display: block;">
+      
+        <div style="text-align:center;">
+          <div class="rpgui-icon helmet-slot"></div>
+        </div>
+        <div style="text-align:center;">
+          <div class="rpgui-icon glove-slot"></div>
+          <div class="rpgui-icon armor-slot"></div>
+          <div class="rpgui-icon wrists-slot"></div>
+        </div>
+        <div style="text-align:center;">
+          <div class="rpgui-icon belt-slot"></div>
+        </div>
+        <div style="text-align:center;">
+          <div class="rpgui-icon shoes-slot"></div>
+        </div>
+      </div> -->
+      
+      
+      <div style="text-align:center;">
+        <div class="rpgui-icon helmet-slot"></div>
+        <div class="rpgui-icon armor-slot"></div>
+        <div class="rpgui-icon belt-slot"></div>
+        <div class="rpgui-icon glove-slot"></div>
+        <div class="rpgui-icon wrists-slot"></div>
+        <div class="rpgui-icon shoes-slot"></div>
+        <div class="rpgui-icon ring-slot"></div>
+      </div>
       <div style="text-align:center;">
         <div class="rpgui-icon weapon-slot"></div>
         <div class="rpgui-icon shield-slot"></div>
-        <div class="rpgui-icon armor-slot"></div>
-        <div class="rpgui-icon helmet-slot"></div>
-      </div>
-      <div style="text-align:center;">
-        <div class="rpgui-icon ring-slot"></div>
+        
         <div class="rpgui-icon potion-slot"></div>
         <div class="rpgui-icon magic-slot"></div>
-        <div class="rpgui-icon shoes-slot"></div>
+        
       </div>
-
-      <hr>
-      <h2>Stats</h2>
-      <div style="text-align:left; position:left; display: inline;">
-        <p> Strengh: 80 <span style="float : right;">Dexterity: 80 </span> </p>
-        <p> Luck: 80 <span style="float : right;">Willpower: 80 </span> </p>
-        <p> Endurance: 80 <span style="float : right;">Charism: 80 </span> </p>
-        <p> Perception: 80 <span style="float : right;">Education: 80 </span> </p>
-
+      <!-- <div style="position: absolute; bottom: 0px;"> -->
+        <hr>
+        <h2>Stats</h2>
+        <div style="text-align:left; position:left; display: inline;">
+          <p> Strengh: 80 <span style="float : right;">Dexterity: 80 </span> </p>
+          <p> Luck: 80 <span style="float : right;">Willpower: 80 </span> </p>
+          <p> Endurance: 80 <span style="float : right;">Charism: 80 </span> </p>
+          <p> Perception: 80 <span style="float : right;">Education: 80 </span> </p>
+  
+        </div>
       </div>
-      <div style="text-align:right;  position:right; display: inline;">
-      </div>
-    </div>
+      
+    <!-- </div> -->
 
     <div class="rpgui-container framed display-none" id="map">
     </div>
@@ -94,9 +144,6 @@
     </div>
 
 
-    <div class="rpgui-container framed" id="notes" style="position: fixed;  bottom: 0; width:60%; height:200px">
-      <textarea name="text" id="text" cols="30" rows="500" style="height:150px;"></textarea>
-    </div>
 
 
     <div class="rpgui-container framed" style="position: absolute; bottom: 0px; right: 0px;">

@@ -97,6 +97,17 @@ div.display_inline, .display_inline p {
     right: -250px;
 }
 
+
+.rpgui-icon.belt-slot {
+    background-image: url("./dist/img/icons/belt-slot.png"); }
+
+.rpgui-icon.glove-slot {
+    background-image: url("./dist/img/icons/glove-slot.png"); }
+        
+.rpgui-icon.wrists-slot {
+    background-image: url("./dist/img/icons/wrists-slot.png"); }
+        
+
 #dicebtn {
     float: right;
 }
