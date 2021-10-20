@@ -8,11 +8,34 @@
   <link href="dist/rpgui.css" rel="stylesheet" type="text/css">
   <title>JDRP</title>
 </head>
+<!-- 
+<body style="background-color:#222222"> -->
+<!-- <body style="background-color:#222222; background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+"> -->
 
-<body style="background-color:#222222">
-  <!-- <body> -->
+<body id="toto">
+
+  <!-- <div id="parchment">
+    <svg>
+      <filter id="wavy2">
+        <feturbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1"></feturbulence>
+        <feDisplacementMap in="SourceGraphic" scale="20" />
+      </filter>
+    </svg>
+  </div> -->
+
+
+  <div id="logo_jdrp" style=""></div>
 
   <div class="rpgui-content">
+
 
     <div class="rpgui-container framed attributes">
       <label>Health:</label>
@@ -42,14 +65,15 @@
     </button>
 
     <!-- <div class="rpgui-container framed" id="notes" style="position: fixed;  bottom: 0; width:60%; height:200px"> -->
-    <div class="rpgui-container framed" id="notes" style="position: fixed;  right: 0;  top:265px; width:625px; height:800px">
+    <div class="rpgui-container framed rpgui-draggable" id="notes"
+      style="position: fixed;  right: 0;  top:265px; width:625px; height:60vh">
       <h1>Notes</h1>
       <hr>
-      <textarea name="text" id="text" cols="10" rows="50" style="height:670px;"></textarea>
+      <textarea name="text" id="text" cols="10" rows="50" style="height: 75%;"></textarea>
     </div>
 
 
-    <div class="rpgui-container framed display" id="caracter">
+    <div class="rpgui-container framed display-none" id="caracter">
       <h1>Profile</h1>
 
       <h2>Equipment</h2>
@@ -88,58 +112,63 @@
           <div class="rpgui-icon shoes-slot"></div>
         </div>
       </div> -->
-      
-      
+
+
       <div style="text-align:center;">
-        <div class="rpgui-icon helmet-slot"></div>
-        <div class="rpgui-icon armor-slot"></div>
-        <div class="rpgui-icon belt-slot"></div>
-        <div class="rpgui-icon glove-slot"></div>
-        <div class="rpgui-icon wrists-slot"></div>
-        <div class="rpgui-icon shoes-slot"></div>
-        <div class="rpgui-icon ring-slot"></div>
+        <div class="rpgui-icon helmet-slot drag"></div>
+        <div class="rpgui-icon armor-slot drag"></div>
+        <div class="rpgui-icon belt-slot drag"></div>
+        <div class="rpgui-icon glove-slot drag"></div>
+        <div class="rpgui-icon wrists-slot drag"></div>
+        <div class="rpgui-icon shoes-slot drag"></div>
+        <div class="rpgui-icon ring-slot drag"></div>
       </div>
       <div style="text-align:center;">
-        <div class="rpgui-icon weapon-slot"></div>
-        <div class="rpgui-icon shield-slot"></div>
-        
-        <div class="rpgui-icon potion-slot"></div>
+        <div class="rpgui-icon weapon-slot drag"></div>
+        <div class="rpgui-icon shield-slot drag"></div>
+
+        <div class="rpgui-icon potion-slot drag"></div>
         <div class="rpgui-icon magic-slot"></div>
-        
+
       </div>
       <!-- <div style="position: absolute; bottom: 0px;"> -->
-        <hr>
-        <h2>Stats</h2>
-        <div style="text-align:left; position:left; display: inline;">
-          <p> Strengh: 80 <span style="float : right;">Dexterity: 80 </span> </p>
-          <p> Luck: 80 <span style="float : right;">Willpower: 80 </span> </p>
-          <p> Endurance: 80 <span style="float : right;">Charism: 80 </span> </p>
-          <p> Perception: 80 <span style="float : right;">Education: 80 </span> </p>
-  
-        </div>
-      </div>
-      
-    <!-- </div> -->
+      <hr>
+      <h2>Stats</h2>
+      <div style="text-align:left; position:left; display: inline;">
+        <p> Strengh: 80 <span style="float : right;">Dexterity: 80 </span> </p>
+        <p> Luck: 80 <span style="float : right;">Willpower: 80 </span> </p>
+        <p> Endurance: 80 <span style="float : right;">Charism: 80 </span> </p>
+        <p> Perception: 80 <span style="float : right;">Education: 80 </span> </p>
 
-    <div class="rpgui-container framed display-none" id="map">
+      </div>
     </div>
 
-    <div class="rpgui-container framed-golden display-none" id="bag">
+    <!-- </div> -->
+
+    <div class="rpgui-container framed display-none rpgui-draggable" id="map">
+    </div>
+
+    <div class="rpgui-container framed-golden display-none " id="bag">
       <h1>Bag</h1>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
-      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot drag">
+        <div class="rpgui-icon potion-red rpgui-cursor-grab-open consomable" draggable="true" id="popote"></div>
+      </div>
+      
+      <div class="rpgui-icon empty-slot drag">
+        <div class="rpgui-icon potion-blue rpgui-cursor-grab-open consomable" draggable="true" id="popote1"></div>
+      </div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag"></div>
 
     </div>
 

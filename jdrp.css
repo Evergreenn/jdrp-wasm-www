@@ -1,8 +1,48 @@
 /* body {
     background-image: url('./img/map/Tds4.jpg');
     background-repeat: no-repeat !important;
-    background-size: 100%;
+    
 } */
+
+/* #parchment {
+  position: absolute;
+  display: flex;
+    width: 75%;
+  min-height: calc((1vw + 1vh) * 75);
+  top: 0%; left: 50%; transform: translate(-50%, 0);
+  margin: 2em 0;
+    padding: 4em;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background: #cac9b5;
+  filter: url(#wavy2);
+} */
+
+#toto {
+    /* font: var(--fontSize)/200% 'Bilbo Swash Caps', cursive; */
+    /* background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80); */
+    /* background-image: url("./img/noisy-texture-200x200-o22-d19-c-8a6244-t0.png"); */
+    background-image: url("./img/noisy-texture-200x200-o5-d19-c-8a6244-t0.png");
+    overflow: hidden;
+    /* background-size: cover; */
+}
+
+#logo_jdrp {
+    /* all: initial; */
+    background-image: url("./img/fav.png");
+    background-repeat: no-repeat !important;
+    /* background-attachment: fixed; */
+    background-size: contain;
+    opacity: 0.4;
+    width: 100vh;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+    /* image-rendering: crisp-edges; */
+    /* image-rendering: pixelated; */
+    /* background-size: cover; */
+    /* background-size: cover; */
+}
 
 h1 {
     font-size: 150% !important;
@@ -14,6 +54,7 @@ h1 {
     width: 25%;
     max-height: 200px;
     height: 200px;
+    /* box-shadow: 10px 5px 5px gray; */
 }
 
 .profile {
@@ -89,24 +130,25 @@ div.display_inline, .display_inline p {
     /* margin-left: 50px; */
 }
 
-.open{
+.open {
     right: 0px;
 }
 
-.close{
+.close {
     right: -250px;
 }
 
-
 .rpgui-icon.belt-slot {
-    background-image: url("./dist/img/icons/belt-slot.png"); }
+    background-image: url("./dist/img/icons/belt-slot.png");
+}
 
 .rpgui-icon.glove-slot {
-    background-image: url("./dist/img/icons/glove-slot.png"); }
-        
+    background-image: url("./dist/img/icons/glove-slot.png");
+}
+
 .rpgui-icon.wrists-slot {
-    background-image: url("./dist/img/icons/wrists-slot.png"); }
-        
+    background-image: url("./dist/img/icons/wrists-slot.png");
+}
 
 #dicebtn {
     float: right;
@@ -118,4 +160,12 @@ div.display_inline, .display_inline p {
     position: absolute;
     top: 200px;
     right: 0px;
+}
+
+.over {
+    border: 3px dotted #666;
+  }
+
+  .grabbing * {
+    cursor: grabbing;
 }
