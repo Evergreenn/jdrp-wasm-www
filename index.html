@@ -20,7 +20,7 @@ background-color: #131313;
 background-size: 20px 20px;
 "> -->
 
-<body id="toto">
+<body id="background">
 
   <!-- <div id="parchment">
     <svg>
@@ -31,8 +31,7 @@ background-size: 20px 20px;
     </svg>
   </div> -->
 
-
-  <div id="logo_jdrp" style=""></div>
+  <div id="logo_jdrp"></div>
 
   <div class="rpgui-content">
 
@@ -72,49 +71,49 @@ background-size: 20px 20px;
       <textarea name="text" id="text" cols="10" rows="50" style="height: 75%;"></textarea>
     </div>
 
-
     <div class="rpgui-container framed display-none" id="caracter">
       <h1>Profile</h1>
 
       <h2>Equipment</h2>
-      <!-- <div style="float:left;">
-      
-        <div style="text-align:center; display: block;">
-          <div class="rpgui-icon helmet-slot"></div>
+      <div style="float:left; display: block;">
+
+        <div style="text-align:center;">
+          <div class="rpgui-icon helmet-slot drag"></div>
         </div>
         <div style="text-align:center;">
-          <div class="rpgui-icon glove-slot"></div>
-          <div class="rpgui-icon armor-slot"></div>
-          <div class="rpgui-icon wrists-slot"></div>
+          <div class="rpgui-icon glove-slot drag"></div>
+          <div class="rpgui-icon armor-slot drag"></div>
+          <div class="rpgui-icon wrists-slot drag"></div>
         </div>
         <div style="text-align:center;">
-          <div class="rpgui-icon belt-slot"></div>
+          <div class="rpgui-icon belt-slot drag"></div>
         </div>
         <div style="text-align:center;">
-          <div class="rpgui-icon shoes-slot"></div>
+          <div class="rpgui-icon shoes-slot drag"></div>
         </div>
       </div>
 
-      <div style="float:right; display: block;">
-      
-        <div style="text-align:center;">
-          <div class="rpgui-icon helmet-slot"></div>
-        </div>
-        <div style="text-align:center;">
-          <div class="rpgui-icon glove-slot"></div>
-          <div class="rpgui-icon armor-slot"></div>
-          <div class="rpgui-icon wrists-slot"></div>
-        </div>
-        <div style="text-align:center;">
-          <div class="rpgui-icon belt-slot"></div>
-        </div>
-        <div style="text-align:center;">
-          <div class="rpgui-icon shoes-slot"></div>
-        </div>
-      </div> -->
+      <div style="position:absolute; top:55%">
 
+        <div style="text-align:center;">
+          <div class="rpgui-icon ring-slot drag"></div>
+          <div class="rpgui-icon magic-slot drag"></div>
+          <div class="rpgui-icon weapon-slot drag"></div>
+        </div>
+        
+        <div style="text-align:center;">
+          <div class="rpgui-icon ring-slot drag"></div>
+          <div class="rpgui-icon potion-slot drag"></div>
+          <div class="rpgui-icon shield-slot drag"></div>
+        </div>
 
-      <div style="text-align:center;">
+      </div>
+
+      <div style="display: block; float:right; height:50%">
+        <textarea name="" id="" cols="30" rows="10" disabled style=" height:120%"></textarea>
+      </div>
+
+      <!-- <div style="text-align:center;">
         <div class="rpgui-icon helmet-slot drag"></div>
         <div class="rpgui-icon armor-slot drag"></div>
         <div class="rpgui-icon belt-slot drag"></div>
@@ -130,20 +129,20 @@ background-size: 20px 20px;
         <div class="rpgui-icon potion-slot drag"></div>
         <div class="rpgui-icon magic-slot"></div>
 
-      </div>
-      <!-- <div style="position: absolute; bottom: 0px;"> -->
-      <hr>
-      <h2>Stats</h2>
-      <div style="text-align:left; position:left; display: inline;">
-        <p> Strengh: 80 <span style="float : right;">Dexterity: 80 </span> </p>
-        <p> Luck: 80 <span style="float : right;">Willpower: 80 </span> </p>
-        <p> Endurance: 80 <span style="float : right;">Charism: 80 </span> </p>
-        <p> Perception: 80 <span style="float : right;">Education: 80 </span> </p>
+      </div> -->
+      <div style="position: absolute; bottom: 0px; width:96%;">
+        <hr>
+        <h2>Stats</h2>
+        <div style="text-align:left; width:auto; position:left; display: inline;">
+          <p> Strengh: 80 <span style="float : right;">Dexterity: 80 </span> </p>
+          <p> Luck: 80 <span style="float : right;">Willpower: 80 </span> </p>
+          <p> Endurance: 80 <span style="float : right;">Charism: 80 </span> </p>
+          <p> Perception: 80 <span style="float : right;">Education: 80 </span> </p>
 
+        </div>
       </div>
+
     </div>
-
-    <!-- </div> -->
 
     <div class="rpgui-container framed display-none rpgui-draggable" id="map">
     </div>
@@ -151,14 +150,22 @@ background-size: 20px 20px;
     <div class="rpgui-container framed-golden display-none " id="bag">
       <h1>Bag</h1>
       <div class="rpgui-icon empty-slot drag">
-        <div class="rpgui-icon potion-red rpgui-cursor-grab-open consomable" draggable="true" id="popote"></div>
+        <div class="rpgui-icon potion-red rpgui-cursor-grab-open" draggable="true" id="popote"
+          data-type="potion"></div>
       </div>
-      
+
       <div class="rpgui-icon empty-slot drag">
-        <div class="rpgui-icon potion-blue rpgui-cursor-grab-open consomable" draggable="true" id="popote1"></div>
+        <div class="rpgui-icon potion-blue rpgui-cursor-grab-open" draggable="true" id="popote1"
+          data-type="potion"></div>
       </div>
-      <div class="rpgui-icon empty-slot drag"></div>
-      <div class="rpgui-icon empty-slot drag"></div>
+      <div class="rpgui-icon empty-slot drag">
+        <div class="rpgui-icon sword rpgui-cursor-grab-open" draggable="true" id="sword1" data-type="weapon" style="background-color: red;">
+        </div>
+      </div>
+      <div class="rpgui-icon empty-slot drag">
+        <div class="rpgui-icon shield rpgui-cursor-grab-open" draggable="true" id="shield1"
+          data-type="shield"></div>
+      </div>
       <div class="rpgui-icon empty-slot drag"></div>
       <div class="rpgui-icon empty-slot drag"></div>
       <div class="rpgui-icon empty-slot drag"></div>
@@ -171,9 +178,6 @@ background-size: 20px 20px;
       <div class="rpgui-icon empty-slot drag"></div>
 
     </div>
-
-
-
 
     <div class="rpgui-container framed" style="position: absolute; bottom: 0px; right: 0px;">
       <button class="rpgui-button" type="button" id="caracter_button"

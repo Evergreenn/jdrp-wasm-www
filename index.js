@@ -1,9 +1,12 @@
 import * as wasm from "jdrp-wasm";
 import * as Ui from "./UI/ui.js"
 import * as D from "./D&D/D&D.js";
+import * as I from "./Item/Item.js";
 
 Ui.UI();
+I.Items();
 D.DandD();
+
 
 window.addEventListener('load', () => {
     const progress = document.getElementById("xp_bar");

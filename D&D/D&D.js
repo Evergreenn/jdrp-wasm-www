@@ -40,13 +40,27 @@ export function DandD() {
                 exchangeElements(draggableElement, dropzone)
             }
         } else {
+            const dragged_type = draggableElement.dataset.type;
+
             if (dropzone.id == "") {
-                if (dropzone.classList.contains("potion-slot")) {
+                const slot_type = dropzone.className;
+                const exploded = slot_type.split("-");
+
+                const is_right_type = exploded.find(el => el.includes(dragged_type)) ? true : false;
+
+
+                if (is_right_type) {
                     dropzone.appendChild(draggableElement)
                 }
 
             } else {
-                if (dropzone.parentElement.classList.contains("potion-slot")) {
+
+                const parent_dropzone = dropzone.parentElement.className;
+                const exploded = parent_dropzone.split("-");
+
+                const is_right_type = exploded.find(el => el.includes(dragged_type)) ? true : false;
+
+                if (is_right_type) {
                     exchangeElements(draggableElement, dropzone)
                 }
             }
