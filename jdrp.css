@@ -164,3 +164,29 @@ div.display_inline, .display_inline p {
   .grabbing * {
     cursor: grabbing;
 }
+
+ /* Style the tab */
+ .tab {
+    overflow: hidden;
+    position: absolute;
+    /* border: 1px solid #ccc; */
+    /* background-color: #f1f1f1; */
+  }
+  
+   .tab button {
+    /* float: left; */
+    /* padding: 14px 16px; */
+    transition: 0.3s;
+  }
+  
+  .tabcontent {
+    display: none;
+    width:68%;
+    max-height: 370px;
+    margin:auto;
+    margin-left: 0px;
+    top:10%;
+    margin-top: 66px;
+    /* border: 1px solid #ccc; */
+    overflow: auto;
+  }

@@ -4,6 +4,8 @@ const getItemFromInventory = () => {
 
     const test = {
         id: "toto",
+        className: "rpgui-icon sword rpgui-cursor-grab-open",
+        type: "weapon",
         properties:{
             weapon:{
                 damage:{
@@ -13,9 +15,20 @@ const getItemFromInventory = () => {
             }
         },
         img: ""
+    };
+
+    const lala = {
+        id: "oui",
+        className: "rpgui-icon shield rpgui-cursor-grab-open",
+        type: "shield",
+        properties:{
+            defense: 5
+        },
+        img: ""
+
     }
 
-    return test
+    return [test, lala]
 
 }
 
@@ -29,10 +42,11 @@ const createHTMLNode = (item, locationId) => {
 
         const element = emptySLot[0];
         const itemNode = document.createElement("div");
-        itemNode.className="rpgui-icon sword rpgui-cursor-grab-open"; 
+        itemNode.className=item.className; 
         itemNode.id=item.id; 
         itemNode.draggable=true; 
-        itemNode.dataset.type= "weapon"
+        itemNode.dataset.type= item.type
+        itemNode.dataset.stats = btoa(JSON.stringify(item.properties));
         element.appendChild(itemNode); 
     }
 
@@ -43,5 +57,9 @@ export const Items = () => {
     
     const toto = getItemFromInventory();
     // console.log(toto);
-    createHTMLNode(toto, "bag");
+
+    toto.forEach(element => {
+        createHTMLNode(element, "bag");
+    });
+   
 }

@@ -1,4 +1,4 @@
-export function DandD() {
+export function DandD(defaultStats) {
 
     const handleDragStart = (ev) => {
         const j = JSON.stringify({ "id": ev.target.id, "class": ev.target.classList })
@@ -39,6 +39,7 @@ export function DandD() {
             } else {
                 exchangeElements(draggableElement, dropzone)
             }
+            removeItemStats(draggableElement)
         } else {
             const dragged_type = draggableElement.dataset.type;
 
@@ -48,11 +49,12 @@ export function DandD() {
 
                 const is_right_type = exploded.find(el => el.includes(dragged_type)) ? true : false;
 
-
                 if (is_right_type) {
                     dropzone.appendChild(draggableElement)
+                    itemStats(draggableElement);
                 }
 
+                
             } else {
 
                 const parent_dropzone = dropzone.parentElement.className;
@@ -62,8 +64,33 @@ export function DandD() {
 
                 if (is_right_type) {
                     exchangeElements(draggableElement, dropzone)
+                    itemStats(draggableElement);
                 }
             }
+        }
+
+    }
+
+    const removeItemStats = item => {
+        // const stats = JSON.parse(atob(item.dataset.stats));
+        if (item.dataset.type === "weapon") {
+            document.getElementById("min-damage").innerText = defaultStats.min;
+            document.getElementById("max-damage").innerText = defaultStats.max;
+        }else if (item.dataset.type === "shield") {
+            document.getElementById("defense").innerText = defaultStats.defense;
+
+        }
+    }
+
+    const itemStats = item => {
+        const stats = JSON.parse(atob(item.dataset.stats));
+
+        if (item.dataset.type === "weapon") {
+            document.getElementById("min-damage").innerText = stats.weapon.damage.min;
+            document.getElementById("max-damage").innerText = stats.weapon.damage.max;
+        }else if (item.dataset.type === "shield") {
+            document.getElementById("defense").innerText = stats.defense;
+
         }
     }
 
